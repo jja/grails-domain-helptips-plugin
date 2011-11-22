@@ -27,7 +27,7 @@ helptips.updateDomainProperty = function(domainPropertyId,domainNameId) {
   \$(function() {
     \$('#'+domainPropertyId).html('');
     \$.ajax({
-        url: '${createLink(controller:"helptips", action:"propertyOptions")}' + '/' + \$('#'+domainNameId).val(),
+        url: '${createLink(controller:"helptip", action:"propertyOptions")}' + '/' + \$('#'+domainNameId).val(),
         success: function(data) {
             \$('#'+domainPropertyId).html(data);
             }

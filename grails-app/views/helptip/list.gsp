@@ -1,4 +1,3 @@
-
 <%@ page import="helptips.Helptip" %>
 <html>
     <head>
@@ -21,37 +20,37 @@
                 <table>
                     <thead>
                         <tr>
-                        
+
                             <g:sortableColumn property="id" title="${message(code: 'helptip.id.label', default: 'Id')}" />
-                        
+
                             <g:sortableColumn property="domainName" title="${message(code: 'helptip.domainName.label', default: 'Domain Name')}" />
-                        
+
                             <g:sortableColumn property="domainProperty" title="${message(code: 'helptip.domainProperty.label', default: 'Domain Property')}" />
-                        
+
                             <g:sortableColumn property="title" title="${message(code: 'helptip.title.label', default: 'Title')}" />
-                        
+
                             <g:sortableColumn property="description" title="${message(code: 'helptip.description.label', default: 'Description')}" />
-                        
+
                             <g:sortableColumn property="published" title="${message(code: 'helptip.published.label', default: 'Published')}" />
-                        
+
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${helptipInstanceList}" status="i" var="helptipInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
+
                             <td><g:link action="show" id="${helptipInstance.id}">${fieldValue(bean: helptipInstance, field: "id")}</g:link></td>
-                        
+
                             <td>${fieldValue(bean: helptipInstance, field: "domainName")}</td>
-                        
+
                             <td>${fieldValue(bean: helptipInstance, field: "domainProperty")}</td>
-                        
+
                             <td>${fieldValue(bean: helptipInstance, field: "title")}</td>
-                        
+
                             <td>${fieldValue(bean: helptipInstance, field: "description")}</td>
-                        
+
                             <td><g:formatBoolean boolean="${helptipInstance.published}" /></td>
-                        
+
                         </tr>
                     </g:each>
                     </tbody>

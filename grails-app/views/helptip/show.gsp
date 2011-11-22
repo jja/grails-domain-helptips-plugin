@@ -21,49 +21,49 @@
             <div class="dialog">
                 <table>
                     <tbody>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.id.label" default="Id" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: helptipInstance, field: "id")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.domainName.label" default="Domain Name" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: helptipInstance, field: "domainName")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.domainProperty.label" default="Domain Property" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: helptipInstance, field: "domainProperty")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.title.label" default="Title" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: helptipInstance, field: "title")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.description.label" default="Description" /></td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean: helptipInstance, field: "description")}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="helptip.published.label" default="Published" /></td>
-                            
+
                             <td valign="top" class="value"><g:formatBoolean boolean="${helptipInstance?.published}" /></td>
-                            
+
                         </tr>
-                    
+
                     </tbody>
                 </table>
             </div>
