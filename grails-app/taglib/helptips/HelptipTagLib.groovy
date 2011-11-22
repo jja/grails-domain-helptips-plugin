@@ -2,14 +2,22 @@ package helptips
 
 class HelptipTagLib {
 
+    def pluginManager
+
   def helptips = { attrs ->
     if (attrs.domain) {
       def helptips = Helptip.findAllByPublishedAndDomainName(true, attrs.domain)
       if (helptips) {
-        out << "<r:require module=\"jquery-ui\"/>\n"
-        out << "<script type=\"text/javascript\" src=\"" + resource(plugin: 'domain-helptips', dir: '/js/jquery', file: 'jquery.bt.custom.js' ) + "\"></script>\n"
-        out << "<link rel='stylesheet' href=\"" + resource(plugin: 'domain-helptips', dir: '/css', file: 'helptips.css" ) + "\"/>\n"
-        out << "<script type=\"text/javascript\" src=\"" + resource(plugin: 'domain-helptips', dir: '/js', file: 'helptips.js" ) + "\"></script>\n"
+        if ( pluginManager.getGrailsPlugin('resources') ) {
+            out << "<r:require module=\"jquery-ui\"/>\n"
+        } else if (attrs.includeJQ==null || attrs.includeJQ==true) {
+            out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery-1.7.custom.min.js" ) + "\"></script>\n"
+            out << "<link rel='stylesheet' href=\"" + g.resource(plugin: 'domain-helptips', dir: '/css', file: 'jquery-ui-1.8.15.custom.css" ) + "\"/>\n"
+            out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery-ui-1.8.15.custom.min.js" ) + "\"></script>\n"
+          }
+        out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery.bt.custom.js' ) + "\"></script>\n"
+        out << "<link rel='stylesheet' href=\"" + g.resource(plugin: 'domain-helptips', dir: '/css', file: 'helptips.css" ) + "\"/>\n"
+        out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'helptips.js" ) + "\"></script>\n"
         out << "<script type=\"text/javascript\">\n"
 
         out << """
