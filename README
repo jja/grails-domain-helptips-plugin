@@ -1,0 +1,10 @@
+domain-helptips : DomainHelptipsGrailsPlugin
+
+Grails plugin to dynamically add helptips to Grails views based on domain properties.
+Tips are user-editable.
+Inspired by/based on Grails plugin dynamic-help
+
+
+INSTALL
+
+d/l the latest .zip file from this repo and run "grails install-plugin" with it
