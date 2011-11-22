@@ -11,7 +11,7 @@ class HelptipTagLib {
         if ( pluginManager.getGrailsPlugin('resources') ) {
             out << "<r:require module=\"jquery-ui\"/>\n"
         } else if (attrs.includeJQ==null || attrs.includeJQ==true) {
-            out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery-1.7.custom.min.js' ) + "\"></script>\n"
+            out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery-1.7.min.js' ) + "\"></script>\n"
             out << "<link rel='stylesheet' href=\"" + g.resource(plugin: 'domain-helptips', dir: '/css', file: 'jquery-ui-1.8.15.custom.css' ) + "\"/>\n"
             out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'jquery-ui-1.8.15.custom.min.js' ) + "\"></script>\n"
           }
@@ -27,7 +27,7 @@ helptips.updateDomainProperty = function(domainPropertyId,domainNameId) {
   \$(function() {
     \$('#'+domainPropertyId).html('');
     \$.ajax({
-        url: '${createLink(controller:"helptips", action:"properties")}' + '/' + \$('#'+domainNameId).val(),
+        url: '${createLink(controller:"helptips", action:"propertyOptions")}' + '/' + \$('#'+domainNameId).val(),
         success: function(data) {
             \$('#'+domainPropertyId).html(data);
             }

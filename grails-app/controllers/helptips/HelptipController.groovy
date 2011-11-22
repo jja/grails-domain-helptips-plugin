@@ -4,9 +4,9 @@ class HelptipController {
 
    def scaffold = Helptip
 
-   def properties = {
+   def propertyOptions = {
        grailsApplication.getArtefactByLogicalPropertyName('Domain',params.id)?.properties.each {
-         render "<option>${it.name}</option>\n"
+         render "<option value='${it.name}'>${it.naturalName}</option>\n"
          }
    }
 
