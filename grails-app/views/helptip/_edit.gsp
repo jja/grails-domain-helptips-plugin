@@ -1,3 +1,9 @@
+<tr>
+<td>
+Toggle&nbsp;help<g:allHelptips />
+</td>
+</tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="domainName"><g:message code="helptip.domainName.label" default="Domain Name" /></label>

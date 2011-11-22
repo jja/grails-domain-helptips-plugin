@@ -15,7 +15,7 @@ class HelptipsBootStrap {
                 description: '<p>Select a domain property from the drop down. This corresponds to a column in the database table.</p>'
             ).save()
 
-            new Helptip(domainName:'helptip', domainProperty:"title", published:true, title:"tip Title ",
+            new Helptip(domainName:'helptip', domainProperty:"title", published:true, title:"Tip Title ",
                 description: "<p>This will be shown as the tip title, in bold or different color.</p>"
             ).save()
 

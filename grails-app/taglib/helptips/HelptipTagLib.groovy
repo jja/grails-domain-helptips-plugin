@@ -48,4 +48,8 @@ helptips.updateDomainProperty = function(domainPropertyId,domainNameId) {
     }
   }
 
+  def allHelptips = { attrs ->
+    out << '<a href="#" id="allHelptips" class="empty helptips_icon helptips_icon_all" onclick="$(\'.helptips_div\').slideToggle()"></a>'
+  }
+
 }
