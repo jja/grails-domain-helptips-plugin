@@ -16,7 +16,8 @@ class Helptip {
         }
 
     static mapping = {
-        description sqlType:'text'
+        description type:'text' // doesn't work with hsqldb
+        //description sqlType:'text' // doesn't work with hsqldb
         }
 
 }
