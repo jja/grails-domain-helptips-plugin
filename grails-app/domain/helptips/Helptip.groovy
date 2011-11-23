@@ -16,7 +16,7 @@ class Helptip {
         }
 
     static mapping = {
-        description type:'text'
+        description sqlType:'text'
         }
 
 }
