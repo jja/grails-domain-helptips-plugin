@@ -2,7 +2,7 @@ package helptips
 
 class HelptipTagLib {
 
-    def pluginManager
+  def pluginManager
 
   def helptips = { attrs ->
     if (attrs.domain) {
@@ -48,7 +48,7 @@ helptips.updateDomainProperty = function(domainPropertyId,domainNameId) {
     }
   }
 
-  def allHelptips = { attrs ->
+  def allHelptipsToggler = { attrs ->
     out << '<a href="#" id="allHelptips" class="empty helptips_icon helptips_icon_all" onclick="$(\'.helptips_div\').slideToggle()"></a>'
   }
 

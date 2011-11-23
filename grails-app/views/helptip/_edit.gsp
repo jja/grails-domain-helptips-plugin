@@ -1,6 +1,6 @@
 <tr>
 <td>
-Toggle&nbsp;help<g:allHelptips />
+Toggle&nbsp;help:<g:allHelptipsToggler />
 </td>
 </tr>
 
