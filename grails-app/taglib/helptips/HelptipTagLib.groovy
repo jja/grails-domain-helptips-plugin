@@ -49,7 +49,7 @@ helptips.updateDomainProperty = function(domainPropertyId,domainNameId) {
   }
 
   def allHelptipsToggler = { attrs ->
-    out << '<a href="#" id="allHelptips" class="empty helptips_icon helptips_icon_all" onclick="$(\'.helptips_div\').slideToggle()"></a>'
+    out << '<a href="#" id="all_allHelptipsToggler" title="Toggle display of all help tips" class="empty helptips_icon helptips_icon_all" onclick="$(\'.helptips_div\').slideToggle()"></a>'
   }
 
 }
