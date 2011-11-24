@@ -2,14 +2,15 @@ window.helptips = window.helptips || {};
 var helptips = window.helptips;
 
 helptips.createTip = function(id, name, prop, title, desc) {
+    var propId = name + '.' + prop;
     var tipIcon = id + '_Helptip_icon';
     var tipId = id + '_Helptip';
     $(function() {
-        $('#'+prop).after( '<a href="#" id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
+        $('#'+propId).after( '<a href="#" id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
         $('#'+tipIcon).after(
                 '<div id="'+tipId+'" style="position:relative;" class="helptips_div">'+
                     '<div class="ui-dialog ui-widget">'+
-                    '<div class="ui-dialog-titlebar ui-widget-header">'+name+': '+prop+'<br><strong>'+title+'</strong></div>'+
+                    '<div class="ui-dialog-titlebar ui-widget-header"><span class="normal">'+name+': '+prop+'</span><br>'+title+'</div>'+
                     '<div class="ui-dialog-content ui-widget-content">'+desc+'</div>'+
                 '</div></div>');
         $("#"+tipId).hide();
