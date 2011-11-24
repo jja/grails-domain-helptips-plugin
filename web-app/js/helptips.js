@@ -2,7 +2,7 @@ window.helptips = window.helptips || {};
 var helptips = window.helptips;
 
 helptips.createTip = function(id, name, prop, title, desc) {
-    var propId = name + '.' + prop;
+    var propId = name + '_' + prop;
     var tipIcon = id + '_Helptip_icon';
     var tipId = id + '_Helptip';
     $(function() {
