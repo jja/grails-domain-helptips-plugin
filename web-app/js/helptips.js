@@ -10,7 +10,11 @@ helptips.createTip = function(id, name, prop, title, desc) {
         $('#'+tipIcon).after(
                 '<div id="'+tipId+'" style="position:relative;" class="helptips_div">'+
                     '<div class="ui-dialog ui-widget">'+
-                    '<div class="ui-dialog-titlebar ui-widget-header"><span class="normal">'+name+': '+prop+'</span><br>'+title+'</div>'+
+                    '<div class="ui-dialog-titlebar ui-widget-header">'+
+                    title+
+                    '<br>'+
+                    '<span class="normal">('+name+': '+prop+')</span>'+
+                    '</div>'+
                     '<div class="ui-dialog-content ui-widget-content">'+desc+'</div>'+
                 '</div></div>');
         $("#"+tipId).hide();
