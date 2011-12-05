@@ -13,7 +13,7 @@ helptips.createTip = function(id, name, prop, title, desc) {
                     '<div class="ui-dialog-titlebar ui-widget-header">'+
                     title+
                     '<br>'+
-                    '<span class="normal">('+name+': '+prop+')</span>'+
+                    '<span class="normal">('+name+'.'+prop+')</span>'+
                     '</div>'+
                     '<div class="ui-dialog-content ui-widget-content">'+desc+'</div>'+
                 '</div></div>');
