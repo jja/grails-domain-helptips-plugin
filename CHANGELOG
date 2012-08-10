@@ -1,0 +1,7 @@
+0.2 20120810
+---
+remove href=# to stop browser window resets; fix the all-toggle button to make all off or on vs toggling each tip on individual state
+
+0.1
+---
+initial release
