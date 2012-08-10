@@ -1,4 +1,4 @@
-<plugin name='domain-helptips' version='0.1' grailsVersion='1.3.7 &gt; *'>
+<plugin name='domain-helptips' version='0.2' grailsVersion='1.3.7 &gt; *'>
   <author>John J. Allison</author>
   <authorEmail>jja@sinequanon.net</authorEmail>
   <title>Domain-oriented dynamic helptips</title>
