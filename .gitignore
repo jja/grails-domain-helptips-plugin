@@ -29,3 +29,11 @@
 
 # temporary? build files
 /target
+
+# unused grails junk
+/grails-app/i18n/
+/web-app/images/
+/web-app/css/errors.css
+/web-app/css/main.css
+/web-app/css/mobile.css
+/web-app/js/application.js
