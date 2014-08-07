@@ -4,12 +4,9 @@ class HelptipTagLib {
 
   def pluginManager
 
-  def helptips = { attrs ->
-    if (attrs.domain) {
-      def helptips = Helptip.findAllByPublishedAndDomainName(true, attrs.domain)
-      if (helptips) {
-
-        // include necessary resource modules or libraries
+  // include necessary resource modules or libraries
+  // but it probably won't work with resources plugin, just do the r:require instead
+  def setupHelptips = { attrs ->
         if ( pluginManager.getGrailsPlugin('resources') ) {
           out << '<r:require module="domain-helptips" />'
         } else {
@@ -25,8 +22,13 @@ class HelptipTagLib {
         out << "<link rel='stylesheet' href=\"" + g.resource(plugin: 'domain-helptips', dir: '/css', file: 'helptips.css' ) + "\"/>\n"
         out << "<script type=\"text/javascript\" src=\"" + g.resource(plugin: 'domain-helptips', dir: '/js', file: 'helptips.js' ) + "\"></script>\n"
         }
+    }
 
-        // now write the js to create the helptips for this domain
+  // write the js to create the helptips for given domain
+  def helptips = { attrs ->
+    if (attrs.domain) {
+      def helptips = Helptip.findAllByPublishedAndDomainName(true, attrs.domain)
+      if (helptips) {
         out << "<script type=\"text/javascript\">\n"
 
         out << """
