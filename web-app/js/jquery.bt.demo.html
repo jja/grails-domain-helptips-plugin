@@ -1,12 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 
+<!-- archived from https://www.lullabot.com/files/bt/bt-latest/DEMO/index.html -->
+
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>BeautyTips Demo Page</title>
 	<meta name="author" content="Jeff Robbins">
-	
+
 	<!-- STUFF YOU NEED FOR BEAUTYTIPS -->
 	<script src="../other_libs/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../other_libs/jquery.hoverIntent.minified.js" type="text/javascript" charset="utf-8"></script>
@@ -14,17 +16,17 @@
 	<!--[if IE]><script src="../other_libs/excanvas_r3/excanvas.js" type="text/javascript" charset="utf-8"></script><![endif]-->
 	<script src="../jquery.bt.min.js" type="text/javascript" charset="utf-8"></script>
 	<!-- /STUFF -->
-	
+
 	<!-- cool easing stuff for animations -->
 	<script src="../other_libs/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
 	<!-- /easing -->
-	
+
 	<!-- just for demo -->
   <script src="demofiles/demo.js" type="text/javascript" charset="utf-8"></script>
   <link href="demofiles/demo.css" rel="stylesheet" type="text/css">
   <!--[if IE]><link href="demofiles/demo-ie-fix.css" rel="stylesheet" type="text/css"><![endif]-->
   <!-- /demo stuff -->
-  
+
 </head>
 <body>
 <div id="page">
@@ -69,7 +71,7 @@
       <code>$(selector).bt({option1: value, option2: value});</code></p>
     <h2>Versions</h2>
       This demo page is using version <strong><script>document.write($().jquery);</script> </strong> of jQuery and version <strong><script>document.write($.bt.version);</script></strong> of BeautyTips.
-      
+
     <h2>Examples</h2>
     <p><small>Note: html and javascript textareas are live. Feel free to experiment with the code and see how BeautyTips are affected.</small></p>
   </div><!-- /#intro -->
@@ -83,7 +85,7 @@
       <div class="js">$('#example1').bt();</div>
     </div></div>
     </div>
-    
+
     <div class="example" id="content-from-argument">
     <h3>Content from argument</h3>
     <div id="example2" class="target">click </div>
@@ -93,7 +95,7 @@
       <div class="js">$('#example2').bt('Contents of the tip is provided in the .bt() call', {trigger: 'click', positions: 'top'});</div>
     </div></div>
     </div>
-    
+
     <div class="example" id="content-from-attribute">
     <h3>Content from  attribute</h3>
     <div class="ie-fix"><a id="example3" href="http://www.lullabot.com" title="link to Lullabot" class="target">hover</a></div>
@@ -113,7 +115,7 @@
 });</div>
     </div></div>
     </div>
-    
+
     <div class="example" id="pre-post-functions">
     <h3>Pre/post functions</h3>
     <div class="ie-fix"><div id="example4" title="This example triggers functions before the tip appears and after the tip is hidden." class="target">hover</div></div>
@@ -134,8 +136,8 @@
 });</div></div>
     </div>
     </div>
-    
-    
+
+
     <div class="example" id="css-tricks">
     <h3>CSS tricks</h3>
     <style type="text/css">.example-5-active {
@@ -189,8 +191,8 @@
    </div>
     </div>
     </div>
-    
-    
+
+
     <div class="example" id="image-content">
       <h3>Image content</h3>
       <div class="ie-fix"><div type="text" id="example16" class="target">hover</div></div>
@@ -198,19 +200,19 @@
         <p>Images can be loaded into the BeautyTip. You should, however, add width and height attributes (or use CSS for this) so that the browser will know what size to "save space for" as the image loads.</p>
         <p>This example also uses some special triggers so that the tip appears on mouseover, but disappears using click. BeautyTips' default clickAnywhereToClose option also allows the user to click anywhere in the document (outside of the tip) in order to close it. This can be disabled either globally or per tip.</p>
         <div class="source">
-          <div class="js">$('#example16').bt('<img src="demofiles/lullabot.png" width="200" height="197" />', 
+          <div class="js">$('#example16').bt('<img src="demofiles/lullabot.png" width="200" height="197" />',
 {
-  width: 200, 
-  fill: 'white', 
-  cornerRadius: 20, 
+  width: 200,
+  fill: 'white',
+  cornerRadius: 20,
   padding: 20,
   strokeWidth: 1,
   trigger: ['mouseover', 'click']
 });</div>
         </div>
       </div>
-    </div> 
-    
+    </div>
+
     <div class="example" id="customizing-triggers">
     <h3>Customizing triggers</h3>
     <div class="ie-fix"><input type="text" id="example7" title="This tip is triggered to appear when the field gets focus and disappear when the field loses focus (i.e. gets blurred)." value="focus" class="alt-target" /></div>
@@ -231,8 +233,8 @@
    </div>
     </div>
     </div>
-    
-    
+
+
     <div class="example" id="customizing-triggers-2">
     <h3>Customizing triggers 2</h3>
     <div class="ie-fix"><input type="text" id="example8" title="The tip doesn't appear until the user actually types text into the field." value="edit me" class="alt-target" /></div>
@@ -252,8 +254,8 @@
    </div>
     </div>
     </div>
-    
-    
+
+
     <div class="example" id="scripting">
       <h3>Scripting on/off</h3>
       <div class="ie-fix"><div type="text" id="example15" class="target">no trigger</div></div>
@@ -267,9 +269,9 @@
 });</div>
         </div>
       </div>
-    </div>    
-    
-    
+    </div>
+
+
     <div class="example" id="hoverintent">
     <h3>HoverIntent</h3>
     <div class="ie-fix"><div type="text" id="example9" title="A long <code>interval</code> value ensures that the user <em>intends</em> to be hovering. A long <code>timeout</code> value ensures that the user <em>intends not</em> to be hovering. " class="target">hover and wait</div></div>
@@ -290,7 +292,7 @@
    </div>
     </div>
     </div>
-    
+
 
     <div class="example" id="ajax-content">
     <h3>Ajax content</h3>
@@ -304,7 +306,7 @@
    </div>
     </div>
     </div>
-    
+
     <div class="example" id="ajax-error">
       <h3>Ajax error</h3>
       <div class="ie-fix"><div type="text" id="example11" class="target">hover</div></div>
@@ -318,7 +320,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="example" id="ajax-content">
     <h3>Ajax dynamic path</h3>
     <div class="ie-fix"><a href="demofiles/demo-ajax.html" id="example18" class="target">hover</a></div>
@@ -331,7 +333,7 @@
    </div>
     </div>
    </div>
-    
+
     <div class="example" id="big-big-big">
       <h3>Big Big Big</h3>
       <div class="ie-fix"><div type="text" id="example14" class="target">click</div></div>
@@ -339,20 +341,20 @@
         <p>A popup with <em>lots</em> of content. This popup gets populated from a div which immediately follows this text in the html source, but gets hidden by the same script which defines the BeautyTip. This is a good way to provide degradable help which appears for users with JavaScript disabled.</p>
         <div id="example-14-content">
 <h3>A really big popup</h3>
-      
+
 <p>This tip is chock-full of content. It is intended to show how BeautyTips deals with fitting large content onto the page. The rest of this content is gibberish. Seamlessly empower dynamic communities with clicks-and-mortar testing procedures. Globally scale front-end ideas through next-generation web services. Holisticly harness business data via resource maximizing meta-services.</p>
 
 <p>Assertively pontificate extensible ROI via end-to-end manufactured products. Compellingly scale resource sucking human capital rather than visionary infomediaries. Quickly evolve robust data with intuitive vortals.</p>
 
-<p>Authoritatively revolutionize scalable solutions without e-business intellectual capital. Compellingly restore web-enabled potentialities through tactical information. Phosfluorescently disintermediate stand-alone convergence for team building sources.</p> 
+<p>Authoritatively revolutionize scalable solutions without e-business intellectual capital. Compellingly restore web-enabled potentialities through tactical information. Phosfluorescently disintermediate stand-alone convergence for team building sources.</p>
 
-<p>Interactively leverage existing sticky products rather than orthogonal expertise. Enthusiastically innovate worldwide process improvements whereas proactive markets. Appropriately evisculate B2B niche markets before vertical content.</p> 
+<p>Interactively leverage existing sticky products rather than orthogonal expertise. Enthusiastically innovate worldwide process improvements whereas proactive markets. Appropriately evisculate B2B niche markets before vertical content.</p>
 
-<p>Quickly reinvent state of the art potentialities after process-centric experiences. Completely e-enable sticky technology whereas impactful ideas. Dynamically underwhelm holistic "outside the box" thinking whereas effective testing procedures.</p> 
+<p>Quickly reinvent state of the art potentialities after process-centric experiences. Completely e-enable sticky technology whereas impactful ideas. Dynamically underwhelm holistic "outside the box" thinking whereas effective testing procedures.</p>
 
-<p>Synergistically plagiarize cost effective leadership and low-risk high-yield e-commerce. Credibly maintain market positioning strategic theme areas and client-based benefits. Globally disseminate clicks-and-mortar infomediaries for premium e-tailers.</p> 
+<p>Synergistically plagiarize cost effective leadership and low-risk high-yield e-commerce. Credibly maintain market positioning strategic theme areas and client-based benefits. Globally disseminate clicks-and-mortar infomediaries for premium e-tailers.</p>
 
-<p>Professionally reconceptualize interdependent content through error-free innovation. Collaboratively provide access to one-to-one strategic theme areas without magnetic web-readiness. Appropriately negotiate strategic opportunities without timely alignments.</p> 
+<p>Professionally reconceptualize interdependent content through error-free innovation. Collaboratively provide access to one-to-one strategic theme areas without magnetic web-readiness. Appropriately negotiate strategic opportunities without timely alignments.</p>
 
 <p>Continually engineer premier best practices after plug-and-play communities. Monotonectally drive installed base users whereas wireless products.</p>
         </div>
@@ -369,14 +371,14 @@ $('#example14').bt({
   padding: 20,
   cornerRadius: 15,
   cssStyles: {
-    fontFamily: '"lucida grande",tahoma,verdana,arial,sans-serif', 
+    fontFamily: '"lucida grande",tahoma,verdana,arial,sans-serif',
     fontSize: '13px'
   }
 });</div>
         </div>
       </div>
     </div>
-    
+
     <div class="example" id="simple-animation">
       <h3>Simple Animation</h3>
       <div class="ie-fix"><div type="text" id="example21" class="target" title="Animations are a bit complicated, but very flexible.">hover</div></div>
@@ -391,7 +393,7 @@ $('#example14').bt({
   hideTip: function(box, callback){
     $(box).animate({opacity: 0}, 500, callback);
   },
-  
+
   shrinkToFit: true,
   hoverIntentOpts: {
     interval: 0,
@@ -401,7 +403,7 @@ $('#example14').bt({
         </div>
       </div>
     </div>
-    
+
     <div class="example" id="complex-animation">
       <h3>Complex Animation</h3>
       <div class="ie-fix"><div type="text" id="example20" class="target" title="Animations are a bit complicated, but very flexible.">hover</div></div>
@@ -433,7 +435,7 @@ $('#example14').bt({
     $canvas
       .animate({width: origWidth * .5, height: origHeight * .5, left: origWidth * .25, top: origHeight * .25, opacity: 0}, 400, 'swing', callback); /* callback */
   },
-  
+
   /* other options */
   shrinkToFit: true,
   hoverIntentOpts: {
@@ -444,8 +446,8 @@ $('#example14').bt({
         </div>
       </div>
     </div>
-    
-    
+
+
     <div class="example" id="shadows">
     <h3>Drop Shadows</h3>
     <div id="example19" class="target">hover</div>
@@ -468,10 +470,10 @@ $('#example14').bt({
   });</div>
     </div></div>
     </div>
-    
-    
-    
-    
+
+
+
+
     <div class="example" id="netflix">
       <h3>Netflix style</h3>
       <div class="ie-fix"><div type="text" id="example13" class="target">hover</div></div>
@@ -481,19 +483,19 @@ $('#example14').bt({
           <div class="js">$('#example13').bt({
   ajaxPath: 'demofiles/netflix.html',
   centerPointY: .1,
-  positions: ['right', 'left'], 
-  padding: 0, 
-  width: 256, 
-  spikeGirth: 60, 
-  spikeLength: 50, 
-  cornerRadius: 10, 
-  fill: '#FFF', 
-  strokeStyle: '#B9090B', 
-  shadow: true, 
+  positions: ['right', 'left'],
+  padding: 0,
+  width: 256,
+  spikeGirth: 60,
+  spikeLength: 50,
+  cornerRadius: 10,
+  fill: '#FFF',
+  strokeStyle: '#B9090B',
+  shadow: true,
   shadowBlur: 12,
   shadowOffsetX: 0,
-  shadowOffsetY: 5, 
-  hoverIntentOpts: {interval: 800, timeout: 0}, 
+  shadowOffsetY: 5,
+  hoverIntentOpts: {interval: 800, timeout: 0},
   cssStyles: {
     fontSize: '12px',
     fontFamily: 'arial,helvetica,sans-serif'
@@ -502,21 +504,21 @@ $('#example14').bt({
         </div>
       </div>
     </div>
-    
-    
+
+
     <div class="example" id="google-maps">
       <h3>Google Maps</h3>
       <div class="ie-fix"><img src="demofiles/gmap-pin.png" alt="gmap-pin" title="" width="19" height="32" id="example17" class="alt-target" /></div>
       <div class="desc">
         <p>Google Maps balloons! Content is provided by a hidden div on the page. Note the use of centerPointX to adjust where the spike extends from. We're also using a close-box "x" image in the content which is a javascript link to close the tip.</p>
-        
+
       <div id="example-17-content" class="gmap">
         <div class="gmap-title">Address:</div>
         <div class="gmap-addr">
           <div>123 Main St.</div>
           <div>Seekonk, MA 02771</div>
         </div>
-        
+
         <div class="gmap-bottom">
           <div>Get directions: <a href="javascript:void(null);">To here</a> - <a href="javascript:void(null);">From here</a></div>
           <div><a href="javascript:void(null);">Search nearby</a> - <a href="javascript:void(null);">Save to My Maps</a></div>
@@ -544,8 +546,8 @@ $('#example17').bt({
         </div>
       </div>
     </div>
-    
-    
+
+
     <div class="example" id="facebook">
       <h3>Facebook style</h3>
       <div class="ie-fix"><div type="text" id="example12" class="target" title="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.">hover</div></div>
@@ -553,21 +555,21 @@ $('#example17').bt({
         <p>Facebook-style.</p>
         <div class="source">
           <div class="js">$('#example12').bt({
-  fill: '#F7F7F7', 
-  strokeStyle: '#B7B7B7', 
-  spikeLength: 10, 
-  spikeGirth: 10, 
-  padding: 8, 
-  cornerRadius: 0, 
+  fill: '#F7F7F7',
+  strokeStyle: '#B7B7B7',
+  spikeLength: 10,
+  spikeGirth: 10,
+  padding: 8,
+  cornerRadius: 0,
   cssStyles: {
-    fontFamily: '"lucida grande",tahoma,verdana,arial,sans-serif', 
+    fontFamily: '"lucida grande",tahoma,verdana,arial,sans-serif',
     fontSize: '11px'
   }
 });</div>
         </div>
       </div>
     </div>
-    
+
     <div class="example" id="hulu">
       <h3>Hulu style</h3>
       <div class="ie-fix"><div type="text" id="hulu-target" class="target">hover</div></div>
@@ -586,15 +588,15 @@ $('#hulu-target').bt({
   contentSelector: "$('#hulu-content')",
   positions: ['right', 'left'],
   fill: '#F4F4F4',
-  strokeStyle: '#666666', 
+  strokeStyle: '#666666',
   spikeLength: 20,
   spikeGirth: 10,
   width: 350,
   overlap: 0,
   centerPointY: 1,
-  cornerRadius: 0, 
+  cornerRadius: 0,
   cssStyles: {
-    fontFamily: '"Lucida Grande",Helvetica,Arial,Verdana,sans-serif', 
+    fontFamily: '"Lucida Grande",Helvetica,Arial,Verdana,sans-serif',
     fontSize: '12px',
     padding: '10px 14px'
   },
@@ -609,7 +611,7 @@ $('#hulu-target').bt({
     </div>
 
   </div> <!-- /.examples -->
-  
+
   <div id="wrapup">
     <h2>Options</h2>
     <p>A full list of options can be found at the bottom of the <a href="../jquery.bt.js" type="text/plain">jquery.bt.js</a> file itself. Scroll to the bottom of the file to see the list of options along with their default values and a short descriptions of what each one does.</p>
@@ -630,6 +632,6 @@ document.write('<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;'+'&#106;&#101;
 
     <p>- Jeff Robbins</p>
   </div>
-  
+
 </body>
 </html>

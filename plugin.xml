@@ -10,6 +10,7 @@ Inspired by/based on Grails plugin dynamic-help
   <documentation>https://github.com/jja/domain-helptips/blob/master/README</documentation>
   <type>DomainHelptipsGrailsPlugin</type>
   <resources>
+    <resource>DomainHelptipsResources</resource>
     <resource>HelptipsBootStrap</resource>
     <resource>helptips.HelptipController</resource>
     <resource>helptips.Helptip</resource>
