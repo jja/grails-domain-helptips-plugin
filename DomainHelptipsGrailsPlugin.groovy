@@ -1,5 +1,5 @@
 class DomainHelptipsGrailsPlugin {
-    def version = "2.0"
+    def version = "2.1"
     def grailsVersion = "2.3.7 > *"
 
     // resources that are excluded from plugin packaging

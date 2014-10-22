@@ -6,9 +6,9 @@ helptips.createTip = function(id, name, prop, title, desc) {
     var tipIcon = id + '_Helptip_icon';
     var tipId = id + '_Helptip';
     $(function() {
-        $('#'+propId).after( '<a id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
+        $('#'+propId).after( '<a id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip helptips_domain_' + name + '" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
         $('#'+tipIcon).after(
-          '<div id="'+tipId+'" style="position:relative;" class="helptips_div">'+
+          '<div id="'+tipId+'" style="position:relative;" class="helptips_div helptips_domain_' + name + '">'+
             '<div class="ui-dialog ui-widget helptips-dialog-widget">'+
               '<div class="ui-dialog-titlebar ui-widget-header">'+
                 title+

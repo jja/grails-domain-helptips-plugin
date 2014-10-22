@@ -5,6 +5,70 @@ Tips are user-editable.
 Inspired by/based on Grails plugin dynamic-help
 
 
+REQUIREMENTS
+
+Uses jQuery UI (and thus jQuery). These are included here if your app doesn't have them.
+
+
 INSTALL
 
-d/l the latest .zip file from this repo and run "grails install-plugin" with it
+clone this repo and specify the directory path in your BuildConfig.groovy like:
+  grails.plugin.location.'domain-helptips'='/path/to/domain-helptips'
+
+
+VIEW SETUP
+
+In your view add the resource:
+  <r:require modules="domain-helptips" />
+
+If you're not using resources, you can use the tag:
+  <g:setupHelptips />
+
+Then initialize the helptips for your domain (lowercased):
+  <g:helptips domain="myDomain" />
+
+or generically:
+  <g:helptips domain="${controllerName}" />
+
+
+VIEW HELPTIPS
+
+Helptips will be automatically added after any HTML element with an ID
+like domain_property, e.g. author_name or book_title.
+This is often an INPUT element. If you want to move the helptip
+somewhere else, then put a SPAN element with the appropriate ID
+where you want the helptip to appear. Note that Grails uses a dot
+separator like 'book.title' as the "name" attribute of INPUT elements,
+so the helptip ID does not conflict.
+
+The helptip itself is a small blue icon which displays the tip as
+a popup on hover or is shown/hidden as a div on click.
+
+There is also a button you can include that toggles display of all
+helptip div elements:
+  <g:allHelptipsToggler />
+
+HasMany and other relations are available for helptips -- any property
+found on the domain class. This also means some properties that are
+not normally part of a form can have helptips, such as id, version,
+dateCreated, and lastUpdated. That's OK; if you don't have an element
+with that ID (like book_id) in your form, or you just don't create
+a helptip for it, then a helptip won't appear.
+
+
+CREATING AND EDITING HELPTIPS
+
+Helptips are managed with a scaffolded controller ('helptip') and the
+included domain and views. You may copy and edit them in your application,
+for example if you'd like to add CKEditor for the helptip description.
+There is also a Bootstrap class in the plugin to create a few helptips
+for the helptip domain.
+
+
+STYLING
+
+The helptips icon is an A element with class 'helptips_icon'.
+The inline helptip is a DIV with class 'helptips_div' that contains
+multiple div elements based upon class 'ui-dialog'.
+The popup helptip uses jQueryUI plugin BeautyTips and is a DIV
+with class 'helptips_popup'.
