@@ -1,4 +1,4 @@
-<plugin name='domain-helptips' version='0.2' grailsVersion='1.3.7 &gt; *'>
+<plugin name='domain-helptips' version='2.0' grailsVersion='2.3.7 &gt; *'>
   <author>John J. Allison</author>
   <authorEmail>jja@sinequanon.net</authorEmail>
   <title>Domain-oriented dynamic helptips</title>
@@ -8,16 +8,12 @@ Tips are user-editable.
 Inspired by/based on Grails plugin dynamic-help
 </description>
   <documentation>https://github.com/jja/domain-helptips/blob/master/README</documentation>
+  <type>DomainHelptipsGrailsPlugin</type>
   <resources>
-    <resource>BuildConfig</resource>
-    <resource>Config</resource>
-    <resource>DataSource</resource>
+    <resource>DomainHelptipsResources</resource>
     <resource>HelptipsBootStrap</resource>
-    <resource>UrlMappings</resource>
     <resource>helptips.HelptipController</resource>
     <resource>helptips.Helptip</resource>
     <resource>helptips.HelptipTagLib</resource>
   </resources>
-  <dependencies />
-  <behavior />
 </plugin>

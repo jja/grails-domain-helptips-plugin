@@ -6,19 +6,26 @@ helptips.createTip = function(id, name, prop, title, desc) {
     var tipIcon = id + '_Helptip_icon';
     var tipId = id + '_Helptip';
     $(function() {
-        $('#'+propId).after( '<a id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
+        $('#'+propId).after( '<a id="' + tipIcon + '" rel="' + id + '" class="empty helptips_icon helptips_icon_tip helptips_domain_' + name + '" onclick="$(\'#' + tipId + '\').slideToggle()"></a>' );
         $('#'+tipIcon).after(
-                '<div id="'+tipId+'" style="position:relative;" class="helptips_div">'+
-                    '<div class="ui-dialog ui-widget">'+
-                    '<div class="ui-dialog-titlebar ui-widget-header">'+
-                    title+
-                    '<br>'+
-                    '<span class="normal">('+name+'.'+prop+')</span>'+
-                    '</div>'+
-                    '<div class="ui-dialog-content ui-widget-content">'+desc+'</div>'+
-                '</div></div>');
+          '<div id="'+tipId+'" style="position:relative;" class="helptips_div helptips_domain_' + name + '">'+
+            '<div class="ui-dialog ui-widget helptips-dialog-widget">'+
+              '<div class="ui-dialog-titlebar ui-widget-header">'+
+                title+
+                '<br>'+
+                '<span class="normal">('+name+'.'+prop+')</span>'+
+              '</div>'+
+              '<div class="ui-dialog-content ui-widget-content">'+desc+'</div>'+
+            '</div></div>');
         $("#"+tipId).hide();
-        $("#"+tipIcon).bt({contentSelector: $("#"+tipId), width: '350px', closeWhenOthersOpen: true, shrinkToFit: 'true', positions: ['right', 'top', 'left', 'bottom', 'most'], margin: 0, padding: 1, fill: '#b2d1ff', strokeWidth: 1, strokeStyle: '#b2d1ff', spikeGirth: 9, spikeLength: 6, hoverIntentOpts: {interval: 100, timeout: 1000}, cornerRadius: 0 });
+        $("#"+tipIcon).bt({ contentSelector: '$("#'+tipId+'").html()',
+          width: '350px', closeWhenOthersOpen: false, shrinkToFit: 'true',
+          positions: ['right', 'top', 'left', 'bottom', 'most'],
+          margin: 0, padding: 1, fill: '#ccc', strokeWidth: 1, strokeStyle: '#ccc',
+          spikeGirth: 9, spikeLength: 6,
+          hoverIntentOpts: {interval: 200, timeout: 800},
+          cornerRadius: 0, cssClass: 'helptips_popup'
+          });
     });
 };
 

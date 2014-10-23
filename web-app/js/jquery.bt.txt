@@ -1,0 +1,11 @@
+The beautytips plugin has been removed from the jQuery plugins
+website and the original blog articles were never followed-up.
+Copies are archived here.
+
+With curCSS deprecation fixed by jja, it seems to work with
+jQuery/-ui 1.10.x, though not as nicely as previous versions,
+esp. jquery-ui-1.8.10.
+
+https://www.lullabot.com/blog/article/beautytips-09-release
+https://www.lullabot.com/blog/articles/announcing-beautytips-jquery-tooltip-plugin
+https://www.lullabot.com/files/bt/bt-latest/DEMO/index.html
