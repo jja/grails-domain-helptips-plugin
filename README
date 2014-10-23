@@ -4,6 +4,8 @@ Grails plugin to dynamically add helptips to Grails views based on domain proper
 Tips are user-editable.
 Inspired by/based on Grails plugin dynamic-help
 
+Copyright jja@sinequanon.net, see LICENSE.txt
+
 
 REQUIREMENTS
 
